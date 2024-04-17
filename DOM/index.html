@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Empresa XYZ</title>
+    <style>
+        /* Estilos CSS para a página */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .fundoColorido {
+            background-color: aqua;
+        }
+
+        .destaque {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="nome-empresa">Empresa XYZ</h1>
+    </header>
+
+    <nav>
+        <ul id="menus">
+            <li><a class="menu" href="#">Início</a></li>
+            <li><a class="menu" href="#">Produtos</a></li>
+            <li><a class="menu" href="#">Serviços</a></li>
+            <li><a class="menu" href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Sobre Nossa Empresa</h2>
+        <p id="sobre">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra justo sed metus aliquam, eget
+            fringilla lectus dapibus.</p>
+
+        <h2>Nossos Produtos</h2>
+        <ul id="produtos">
+            <li>Produto 1</li>
+            <li>Produto 2</li>
+            <li>Produto 3</li>
+        </ul>
+
+        <h2>Serviços Oferecidos</h2>
+        <ul id="servicos">
+            <li>Serviço A</li>
+            <li>Serviço B</li>
+            <li>Serviço C</li>
+        </ul>
+
+        <h2>Contato</h2>
+        <p>Telefone: <span aria-content="telefone">(00) 1234-5678</span></p>
+        <p>Email:
+        <address><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                data-cfemail="24474b4a5045504b64414954564157450a474b49">[email&#160;protected]</a></address>
+        </p>
+
+        <h2>Relatório de Vendas</h2>
+        <table id="vendas">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/01/2024</td>
+                    <td>Produto A</td>
+                    <td>10</td>
+                    <td>R$ 100,00</td>
+                </tr>
+                <tr>
+                    <td>02/01/2024</td>
+                    <td>Produto B</td>
+                    <td>8</td>
+                    <td>R$ 80,00</td>
+                </tr>
+                <tr>
+                    <td>03/01/2024</td>
+                    <td>Produto C</td>
+                    <td>15</td>
+                    <td>R$ 150,00</td>
+                </tr>
+                <tr>
+                    <td>01/02/2024</td>
+                    <td>Produto A</td>
+                    <td>10</td>
+                    <td>R$ 120,00</td>
+                </tr>
+                <tr>
+                    <td>02/02/2024</td>
+                    <td>Produto B</td>
+                    <td>8</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>03/02/2024</td>
+                    <td>Produto C</td>
+                    <td>15</td>
+                    <td>R$ 300,00</td>
+                </tr>
+                <tr>
+                    <td>01/03/2024</td>
+                    <td>Produto A</td>
+                    <td>10</td>
+                    <td>R$ 190,00</td>
+                </tr>
+                <tr>
+                    <td>02/03/2024</td>
+                    <td>Produto B</td>
+                    <td>8</td>
+                    <td>R$ 180,00</td>
+                </tr>
+                <tr>
+                    <td>03/03/2024</td>
+                    <td>Produto C</td>
+                    <td>15</td>
+                    <td>R$ 1150,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead id="resumo-vendas-cab">
+                <tr>
+                    <th colspan="3">Resumo de vendas</th>
+                </tr>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor total</th>
+                </tr>
+            </thead>
+            <tbody id="resumo-vendas">
+
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Empresa XYZ. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+
+        //Fácil:Inserir um Novo Elemento:
+        //Adicione um novo parágrafo no final da seção "Sobre Nossa Empresa" com o texto "Somos uma empresa comprometida com a qualidade e satisfação dos nossos clientes.
+
+        const p = document.getElementById("sobre")
+        const p2 = document.createElement("p")
+        p2.innerText = "Somos uma empresa comprometida com a qualidade e satisfação dos nossos clientes."
+        p.appendChild(p2)
+
+        //Alterar Conteúdo de um Elemento:
+        //Altere o texto do último item da lista de produtos para "Produto 4".
+
+        const produtos = Array.from(document.getElementById("produtos").children)
+        produtos[2].innerText = "Produto 4"
+
+
+        //Editar Estilos CSS:
+        //Mude a cor de fundo do cabeçalho (
+        //) para #FF5733.
+
+        const header = document.getElementsByTagName("header")
+        header[0].style.backgroundColor = "#FF5733"
+
+
+        //Intermediário:
+        //Calcular Métricas de uma Lista:
+        //Conte quantos itens existem na lista de produtos e exiba essa contagem em um novo parágrafo abaixo da lista.
+
+        const prod = document.getElementById("produtos")
+        const prod2 = prod.children
+        const qtdProdutos = prod2.length
+        const p3 = document.createElement("p")
+        p3.innerText = "quantidade de produtos: " + qtdProdutos
+        prod.appendChild(p3)
+
+
+
+        //Consulta de Elementos:
+        //Selecione o segundo parágrafo da seção "Serviços Oferecidos" e altere seu texto para "Oferecemos uma variedade de serviços para atender às necessidades de nossos clientes."
+
+        const p4 = document.getElementById("servicos")
+        const p5 = document.createElement("p")
+        p5.innerText = "Oferecemos uma variedade de serviços para atender às necessidades de nossos clientes."
+        p4.appendChild(p5)
+
+        //Adicionar Classes CSS:
+        //Adicione a classe "destaque" ao primeiro item da lista de produtos.
+
+        const prod3 = Array.from(document.getElementById("produtos").children)
+        prod3[0].className = "destaque"
+
+        //Difícil:
+        //Remover Elemento Existente:
+        //Remova a tabela de relatório de vendas da seção correspondente.
+
+        const vendas = document.getElementById("vendas")
+        vendas.remove()
+
+
+        //Manipulação de Atributos:
+        //Altere o atributo href do último item do menu para "contato.html".
+
+        const menu = document.getElementById("menus")
+        const menus = Array.from(menu.children)
+        console.log(menus)
+        const a = menus[3].children[0]
+        console.log(a)
+        a.href = "contato.html"
+
+
+        //href.innerText = "contato.html"
+
+        //Estilização Dinâmica:
+        //Adicione um evento de clique ao cabeçalho (
+        //) para alternar entre as cores de fundo #333 e #555 sempre que for clicado.-->
+
+        const header2 = document.getElementsByTagName("header")
+        for (var i = 0; i < header2.length; i++) {
+            header2[i].addEventListener('click', function () {
+                if (this.style.backgroundColor === "rgb(51, 51, 51)") {
+                    this.style.backgroundColor = "#555"
+                } else {
+                    this.style.backgroundColor = "#333"
+                }
+
+            })
+        }
+
+
+    </script>
+
+</html>
